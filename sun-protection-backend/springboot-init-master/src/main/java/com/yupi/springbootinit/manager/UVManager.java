@@ -34,6 +34,7 @@ public class UVManager
     {
         String url = openWeatherGeocoding + "?q=" + location + "&limit=1&appid=" + openWeatherApiKey;
         String response = HttpUtil.get(url);
+        System.out.println(response);
         JSONArray jsonArray = JSONUtil.parseArray(response);
         if (!jsonArray.isEmpty())
         {
