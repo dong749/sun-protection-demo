@@ -17,6 +17,14 @@ export async function addProductUsingPost(
   });
 }
 
+/** getProductList GET /api/product/all */
+export async function getProductListUsingGet(options?: { [key: string]: any }) {
+  return request<API.BaseResponseListProduct_>('/api/product/all', {
+    method: 'GET',
+    ...(options || {}),
+  });
+}
+
 /** deleteProduct POST /api/product/delete */
 export async function deleteProductUsingPost(
   body: API.DeleteRequest,

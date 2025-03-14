@@ -1,8 +1,10 @@
 package com.yupi.springbootinit.model.dto.product;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,19 +17,41 @@ import java.util.List;
 public class ProductAddRequest implements Serializable {
 
     /**
-     * 标题
+     * 商品名称
      */
-    private String title;
+    private String name;
 
     /**
-     * 内容
+     * 商品信息
      */
-    private String content;
+    private String detail;
 
     /**
-     * 标签列表
+     * 商品分类
      */
-    private List<String> tags;
+    private String category;
 
+    /**
+     * 价格
+     */
+    private double price;
+
+
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    /**
+     * 是否删除
+     */
+    private Integer isDelete;
+
+    @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

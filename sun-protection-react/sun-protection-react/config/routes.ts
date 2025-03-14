@@ -1,10 +1,15 @@
 import access from "@/access";
-import { lastIndexOf } from "lodash";
+import { Component } from 'react';
 
 export default [
   {
-    path: '/homepage',
-    access: false,
-    component: './HomePage'
-  }
+    path: '/',
+    name: 'Home',
+    component: '@/pages/HomePage',
+  },
+  {
+    path: '/products',
+    name: 'Products',
+    component: '@/pages/ProductPage',
+  },
 ];

@@ -29,6 +29,11 @@ public class ProductQueryRequest extends PageRequest implements Serializable {
      */
     private String name;
 
+    /**
+     * 价格
+     */
+    private double price;
+
 
 
     /**

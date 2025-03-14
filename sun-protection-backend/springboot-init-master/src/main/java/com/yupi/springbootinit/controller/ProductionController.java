@@ -186,4 +186,11 @@ public class ProductionController {
         return ResultUtils.success(result);
     }
 
+    @GetMapping("/all")
+    public BaseResponse<List<Product>> getProductList(HttpServletRequest request)
+    {
+        List<Product> list = productService.list();
+        return ResultUtils.success(list);
+    }
+
 }

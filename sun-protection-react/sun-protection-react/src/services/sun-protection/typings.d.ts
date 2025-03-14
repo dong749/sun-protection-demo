@@ -5,6 +5,12 @@ declare namespace API {
     message?: string;
   };
 
+  type BaseResponseListProduct_ = {
+    code?: number;
+    data?: Product[];
+    message?: string;
+  };
+
   type BaseResponseLoginUserVO_ = {
     code?: number;
     data?: LoginUserVO;
@@ -71,11 +77,6 @@ declare namespace API {
   type getUserByIdUsingGETParams = {
     /** id */
     id?: number;
-  };
-
-  type UVIndexParams = {
-    city: string;
-    region: string;
   };
 
   type getUserVOByIdUsingGETParams = {
@@ -151,21 +152,30 @@ declare namespace API {
     id?: number;
     isDelete?: number;
     name?: string;
+    price?: number;
     updateTime?: string;
     userId?: number;
   };
 
   type ProductAddRequest = {
-    content?: string;
-    tags?: string[];
-    title?: string;
+    category?: string;
+    createTime?: string;
+    detail?: string;
+    isDelete?: number;
+    name?: string;
+    price?: number;
+    updateTime?: string;
   };
 
   type ProductEditRequest = {
-    content?: string;
+    category?: string;
+    createTime?: string;
+    detail?: string;
     id?: number;
-    tags?: string[];
-    title?: string;
+    isDelete?: number;
+    name?: string;
+    price?: number;
+    updateTime?: string;
   };
 
   type ProductQueryRequest = {
@@ -174,6 +184,7 @@ declare namespace API {
     id?: number;
     name?: string;
     pageSize?: number;
+    price?: number;
     sortField?: string;
     sortOrder?: string;
     userId?: number;

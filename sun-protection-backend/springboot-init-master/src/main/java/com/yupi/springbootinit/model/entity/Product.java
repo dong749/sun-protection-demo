@@ -43,6 +43,11 @@ public class Product implements Serializable {
     private Long userId;
 
     /**
+     * 价格
+     */
+    private double price;
+
+    /**
      * 创建时间
      */
     private Date createTime;

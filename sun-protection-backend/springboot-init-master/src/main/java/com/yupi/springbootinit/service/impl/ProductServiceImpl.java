@@ -40,11 +40,13 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product>
         String category = productQueryRequest.getCategory();
         String sortField = productQueryRequest.getSortField();
         String sortOrder = productQueryRequest.getSortOrder();
+        Double price = productQueryRequest.getPrice();
 
         queryWrapper.eq(id != null , "id", id);
         queryWrapper.eq(StringUtils.isNotBlank(name), "name", name);
         queryWrapper.eq(ObjectUtils.isNotEmpty(userId) , "userId", userId);
         queryWrapper.eq(StringUtils.isNotBlank(category) , "category", category);
+        queryWrapper.eq(true, "price", price);
         queryWrapper.eq("isDelete", false);
 
         queryWrapper.orderBy(SqlUtils.validSortField(sortField), sortOrder.equals(CommonConstant.SORT_ORDER_ASC)
