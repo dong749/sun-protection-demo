@@ -5,15 +5,15 @@ declare namespace API {
     message?: string;
   };
 
-  type BaseResponseListProduct_ = {
+  type BaseResponseListMelanomaSkinCancer_ = {
     code?: number;
-    data?: Product[];
+    data?: MelanomaSkinCancer[];
     message?: string;
   };
 
-  type BaseResponseLoginUserVO_ = {
+  type BaseResponseListProduct_ = {
     code?: number;
-    data?: LoginUserVO;
+    data?: Product[];
     message?: string;
   };
 
@@ -29,18 +29,6 @@ declare namespace API {
     message?: string;
   };
 
-  type BaseResponsePageUser_ = {
-    code?: number;
-    data?: PageUser_;
-    message?: string;
-  };
-
-  type BaseResponsePageUserVO_ = {
-    code?: number;
-    data?: PageUserVO_;
-    message?: string;
-  };
-
   type BaseResponseProduct_ = {
     code?: number;
     data?: Product;
@@ -53,18 +41,6 @@ declare namespace API {
     message?: string;
   };
 
-  type BaseResponseUser_ = {
-    code?: number;
-    data?: User;
-    message?: string;
-  };
-
-  type BaseResponseUserVO_ = {
-    code?: number;
-    data?: UserVO;
-    message?: string;
-  };
-
   type DeleteRequest = {
     id?: number;
   };
@@ -74,14 +50,11 @@ declare namespace API {
     id?: number;
   };
 
-  type getUserByIdUsingGETParams = {
-    /** id */
-    id?: number;
-  };
-
-  type getUserVOByIdUsingGETParams = {
-    /** id */
-    id?: number;
+  type getUVIndexByLatAndLonUsingGETParams = {
+    /** lat */
+    lat?: number;
+    /** lon */
+    lon?: number;
   };
 
   type getUVIndexUsingGETParams = {
@@ -91,14 +64,10 @@ declare namespace API {
     district?: string;
   };
 
-  type LoginUserVO = {
-    createTime?: string;
+  type MelanomaSkinCancer = {
+    count?: number;
     id?: number;
-    updateTime?: string;
-    userAvatar?: string;
-    userName?: string;
-    userProfile?: string;
-    userRole?: string;
+    year?: string;
   };
 
   type OrderItem = {
@@ -114,32 +83,6 @@ declare namespace API {
     orders?: OrderItem[];
     pages?: number;
     records?: Product[];
-    searchCount?: boolean;
-    size?: number;
-    total?: number;
-  };
-
-  type PageUser_ = {
-    countId?: string;
-    current?: number;
-    maxLimit?: number;
-    optimizeCountSql?: boolean;
-    orders?: OrderItem[];
-    pages?: number;
-    records?: User[];
-    searchCount?: boolean;
-    size?: number;
-    total?: number;
-  };
-
-  type PageUserVO_ = {
-    countId?: string;
-    current?: number;
-    maxLimit?: number;
-    optimizeCountSql?: boolean;
-    orders?: OrderItem[];
-    pages?: number;
-    records?: UserVO[];
     searchCount?: boolean;
     size?: number;
     total?: number;
@@ -192,75 +135,5 @@ declare namespace API {
 
   type uploadFileUsingPOSTParams = {
     biz?: string;
-  };
-
-  type User = {
-    createTime?: string;
-    id?: number;
-    isDelete?: number;
-    updateTime?: string;
-    userAccount?: string;
-    userName?: string;
-    userPassword?: string;
-    userRole?: string;
-  };
-
-  type UserAddRequest = {
-    userAccount?: string;
-    userAvatar?: string;
-    userName?: string;
-    userRole?: string;
-  };
-
-  type userLoginByWxOpenUsingGETParams = {
-    /** code */
-    code: string;
-  };
-
-  type UserLoginRequest = {
-    userAccount?: string;
-    userPassword?: string;
-  };
-
-  type UserQueryRequest = {
-    current?: number;
-    id?: number;
-    mpOpenId?: string;
-    pageSize?: number;
-    sortField?: string;
-    sortOrder?: string;
-    unionId?: string;
-    userName?: string;
-    userProfile?: string;
-    userRole?: string;
-  };
-
-  type UserRegisterRequest = {
-    checkPassword?: string;
-    userAccount?: string;
-    userPassword?: string;
-  };
-
-  type UserUpdateMyRequest = {
-    userAvatar?: string;
-    userName?: string;
-    userProfile?: string;
-  };
-
-  type UserUpdateRequest = {
-    id?: number;
-    userAvatar?: string;
-    userName?: string;
-    userProfile?: string;
-    userRole?: string;
-  };
-
-  type UserVO = {
-    createTime?: string;
-    id?: number;
-    userAvatar?: string;
-    userName?: string;
-    userProfile?: string;
-    userRole?: string;
   };
 }

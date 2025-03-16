@@ -12,4 +12,14 @@ export default [
     name: 'Products',
     component: '@/pages/ProductPage',
   },
+  {
+    path: '/personalized-risk',
+    name: 'Personalized Riks Information',
+    component: '@/pages/PersonalizedRiskPage',
+  },
+  {
+    path: '/danger',
+    name: 'UV Danger Information',
+    component: '@/pages/UVDangerInformationPage',
+  }
 ];

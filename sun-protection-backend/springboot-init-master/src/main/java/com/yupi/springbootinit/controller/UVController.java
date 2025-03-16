@@ -27,4 +27,11 @@ public class UVController
             return "{\"error\": \"无法获取该地区的经纬度\"}";
         }
     }
+
+    @GetMapping("uv-location")
+    public String getUVIndexByLatAndLon(Double lat, Double lon)
+    {
+        String uvIndex = uvManager.getUVIndex(lat, lon);
+        return uvIndex;
+    }
 }

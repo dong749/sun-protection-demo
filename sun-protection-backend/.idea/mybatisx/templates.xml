@@ -68,8 +68,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Product" />
-                  <option name="tableName" value="product" />
+                  <option name="className" value="MelanomaSkinCancer" />
+                  <option name="tableName" value="melanoma_skin_cancer" />
                 </TableUIInfo>
               </list>
             </option>
