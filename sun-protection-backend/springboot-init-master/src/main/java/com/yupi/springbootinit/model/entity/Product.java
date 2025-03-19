@@ -48,6 +48,11 @@ public class Product implements Serializable {
     private double price;
 
     /**
+     * 图片
+     */
+    private String picture;
+
+    /**
      * 创建时间
      */
     private Date createTime;

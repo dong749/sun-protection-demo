@@ -34,6 +34,11 @@ public class ProductQueryRequest extends PageRequest implements Serializable {
      */
     private double price;
 
+    /**
+     * 图片
+     */
+    private String image;
+
 
 
     /**

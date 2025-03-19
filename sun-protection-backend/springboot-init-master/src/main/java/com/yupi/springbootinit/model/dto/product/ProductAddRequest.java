@@ -36,6 +36,11 @@ public class ProductAddRequest implements Serializable {
      */
     private double price;
 
+    /**
+     * 图片
+     */
+    private String image;
+
 
     /**
      * 创建时间
